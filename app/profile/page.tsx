@@ -1,4 +1,4 @@
-export default function Home() {
+export default function ProfilePage() {
   return (
     <main className="min-h-screen w-full p-6 relative">
       <div className="absolute w-[560px] h-[560px] top-[-300px] left-1/2 -translate-x-1/2 rounded-full opacity-100 bg-muted z-0" />
@@ -22,16 +22,17 @@ export default function Home() {
           Organizatör
         </span>
       </div>
-      <div className="absolute w-[282px] h-[78px] top-[441px] left-[60px] z-10 flex flex-row items-center justify-between gap-[48px] opacity-100 font-urbanist">
+      <div className="bg-red-500 absolute w-[282px] h-[78px] top-[441px] left-[60px] z-10 flex flex-row items-center justify-between gap-[48px] opacity-100 font-urbanist">
         <div className="flex flex-col items-center">
-          <div className="w-[62px] h-[20px] text-[16px] leading-[20px] font-medium text-muted-foreground text-center">Takipçi</div>
-          <div className="w-[93px] h-[40px] text-[24px] leading-[40px] font-semibold text-center">1.2K</div>
+          <div className="w-[62px] h-[40px] text-[16px] leading-[20px] font-medium text-muted-foreground text-center">Takipçi</div>
+          <div className="w-[93px] h-[1s0px] text-[24px] leading-[40px] font-semibold text-center">2.4K</div>
         </div>
         <div className="flex flex-col items-center">
-          <div className="w-[62px] h-[20px] text-[16px] leading-[20px] font-medium text-muted-foreground text-center">Takip edilenler</div>
-          <div className="w-[93px] h-[40px] text-[24px] leading-[40px] font-semibold text-center">342</div>
+          <div className="w-[62px] h-[45px] text-[45px] leading-[20px] font-medium text-muted-foreground text-center">Takip hgbjk</div>
+          <div className="w-[93px] h-[10px] text-[24px] leading-[40px] font-semibold text-center">128</div>
         </div>
       </div>
     </main>
   );
 }
+
