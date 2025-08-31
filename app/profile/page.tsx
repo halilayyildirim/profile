@@ -1,9 +1,20 @@
+import ClassCard from "./ClassCard";
+
 export default function ProfilePage() {
+  const liste=["öğrenci" , "organizatör" ,"baba" ,"hoca"]
   return (
-    <main className="min-h-screen w-full p-6 relative">
-      <div className="absolute w-[560px] h-[560px] top-[-300px] left-1/2 -translate-x-1/2 rounded-full opacity-100 bg-muted z-0" />
-      <div className="absolute w-[124px] h-[124px] top-[190px] left-[139px] rounded-[500px] border-[3px] border-border opacity-100 bg-muted overflow-hidden z-10" />
-      <div className="absolute w-[222px] h-[88px] top-[310px] left-[90px] z-10 flex flex-col items-center justify-center gap-[6px] text-center px-2 opacity-100 font-urbanist">
+    <main className="h-auto w-full flex flex-col items-center">
+      
+       <section className="relative h-[300px] w-full">
+       
+        <div className="absolute w-[560px] h-[560px] top-[-300px] left-1/2 -translate-x-1/2 rounded-full bg-muted z-0" >
+        </div>
+
+      
+        <div className="absolute w-[124px] h-[124px] top-[190px] left-[139px] rounded-full border-[3px] border-border bg-muted overflow-hidden z-10" />
+      </section>
+
+      <div className="flex mt-2 flex-col items-center justify-center gap-[6px] text-center px-2 opacity-100 font-urbanist">
         <div className="text-[28px] leading-[36px] font-medium whitespace-nowrap overflow-hidden text-ellipsis">
           Halil Ayyıldırım
         </div>
@@ -14,24 +25,33 @@ export default function ProfilePage() {
           Yönetim Bilişim Sistemleri - 3. Sınıf
         </div>
       </div>
-      <div className="absolute w-[222px] top-[406px] left-[90px] z-10 flex flex-row items-center justify-center gap-2">
-        <span className="px-3 py-1 rounded-full bg-[#DAE2FF] text-[#5083F0] text-[12px] leading-[16px] font-medium">
-          Öğrenci
-        </span>
-        <span className="px-3 py-1 rounded-full bg-[#DAE2FF] text-[#5083F0] text-[12px] leading-[16px] font-medium">
-          Organizatör
-        </span>
+      <div className="flex flex-row items-center justify-center gap-2 mt-2">
+        {
+          liste.map((text,i)=>(
+             <span key={i} className="px-3 py-1 rounded-full bg-[#DAE2FF] text-[#5083F0] text-[12px] leading-[16px] font-medium">
+                {text}
+            </span>
+
+          ))
+        }
+        
       </div>
-      <div className="bg-red-500 absolute w-[282px] h-[78px] top-[441px] left-[60px] z-10 flex flex-row items-center justify-between gap-[48px] opacity-100 font-urbanist">
-        <div className="flex flex-col items-center">
-          <div className="w-[62px] h-[40px] text-[16px] leading-[20px] font-medium text-muted-foreground text-center">Takipçi</div>
-          <div className="w-[93px] h-[1s0px] text-[24px] leading-[40px] font-semibold text-center">2.4K</div>
+      <div className="bg-red-500  flex flex-row gap-5 w-[40%] opacity-100 font-urbanist ">
+        <div className="flex flex-col items-center bg-blue-500 ml-2 ">
+          <div className=" text-[32px] leading-[20px] font-medium text-muted-foreground text-center">Takipçi</div>
+          <div className=" text-[24px] leading-[40px] font-semibold text-center pt-2">2.4K</div>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="w-[62px] h-[45px] text-[45px] leading-[20px] font-medium text-muted-foreground text-center">Takip hgbjk</div>
-          <div className="w-[93px] h-[10px] text-[24px] leading-[40px] font-semibold text-center">128</div>
+
+        <div className="flex flex-col items-center bg-green-600 ">
+          <div className=" text-[16px] leading-[20px] font-medium text-muted-foreground text-center">Takip</div>
+          <div className=" text-[24px] leading-[40px] font-semibold text-center pt-2">128</div>
         </div>
       </div>
+
+      <div>
+        <ClassCard value={2}/>
+      </div>
+
     </main>
   );
 }
